@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <!-- Page Title Section -->
 <div class="page-mycarousel">
 	<img src="<?php echo get_template_directory_uri(); ?>/images/page-header-bg.jpg"  class="img-responsive">
