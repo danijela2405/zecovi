@@ -12,14 +12,15 @@ $wallstreet_pro_options = theme_data_setup();
         $args = array(
             'post_type' => 'vijesti',
             'orderby' => 'date',
-            'order' => 'ASC',
+            'order' => 'DESC',
             'paged' => $paged,
             'posts_per_page' => $post_per_page,
         );
         $wp_query = new WP_Query($args);
 
         if (have_posts()):
-            while ($wp_query->have_posts()):
+            $count = 0;
+            while ($wp_query->have_posts() && $count <= 4):
                 $wp_query->the_post();
                 if (has_post_thumbnail( $post->ID ) ): ?>
                     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -34,7 +35,7 @@ $wallstreet_pro_options = theme_data_setup();
                                 </div>
                         </div>
                     </div>
-                <?php else:
+                <?php $count++; else:
                     continue;
                 endif;?>
         <?php endwhile; else: ?>

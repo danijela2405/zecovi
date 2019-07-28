@@ -458,6 +458,10 @@ function save_details()
 {
     global $post;
 
+    if($post === null){
+        return null;
+    }
+
     if ($post->post_type == "slideshow") {
         if (!isset($_POST["url"])):
             return $post;

@@ -69,15 +69,15 @@
 		<div class="navbar-header">
 		<!-- logo -->
 		<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' )); ?>">
-			<?php
-				if($current_options['text_title'] ==true)
-				{ echo "<div class=wallstreet_title_head>" . get_bloginfo( ). "</div>"; }
-				else if($current_options['upload_image_logo']!='') 
-				{ ?>
-				<img src="<?php echo esc_url($current_options['upload_image_logo']); ?>" style="height:<?php if($current_options['height']!='') { 
-				echo $current_options['height']; }  else { "50"; } ?>px; width:<?php if($current_options['width']!='') { echo $current_options['width']; }  else { "250"; } ?>px;" alt="logo" />
-				<?php } ?>
-			</a>
+            <div style="display:inline-block;vertical-align:top;">
+                <img src="<?php echo esc_url($current_options['upload_image_logo']); ?>" style="height:50px; width:auto;" alt="logo" />
+
+            </div>
+            <div style="display:inline-block;">
+                <?php
+                echo "<div class=wallstreet_title_head>".get_bloginfo()."</div>";
+                ?>
+            </div>
 		</a><!-- /logo -->
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			<span class="sr-only"><?php echo 'Toggle navigation'; ?></span>
