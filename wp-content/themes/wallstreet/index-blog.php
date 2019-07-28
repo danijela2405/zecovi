@@ -14,18 +14,23 @@
 					<div class="pagetitle-separator-box"></div>
 				</div>
 			</div>
-			<p><?php echo $current_options['home_blog_description']; ?></p>
+			<p>Saznajte sve o kunićima i brizi o istima preko naših <a href="http://192.168.19.50/category/blog/">članaka</a>!</p>
 		<?php } ?>
 		</div>
 	</div>
 	<div class="row">
 		<?php
 		$j=1;
-		$args = array( 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
+		$args = array( 'post_type' => 'post','posts_per_page' =>30,'post__not_in'=>get_option("sticky_posts"));
 		query_posts( $args );
 		if(query_posts( $args ))
 		{	while(have_posts()):the_post();
-			$recent_expet = get_the_excerpt(); ?>
+            $recent_expet = get_the_excerpt();
+            $category = get_the_category();
+            if ($category[0]->slug === 'kunici-za-udomljavanje') {
+                continue;
+            }
+            ?>
 			<div class="col-md-4 col-sm-6">
 				<div class="home-blog-area">
 					<div class="home-blog-post-img"><?php
@@ -43,7 +48,10 @@
 						</div>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
 						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Read More','wallstreet'); ?></a></div>							
+                        <div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e(
+                                    'Više...',
+                                    'wallstreet'
+                                ); ?></a></div>
 					</div>
 				</div>
 			</div>

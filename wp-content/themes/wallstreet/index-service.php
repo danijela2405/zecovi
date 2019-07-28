@@ -14,9 +14,7 @@
 				</div>
 			</div>
 		<?php } ?>
-		<?php if($current_options['service_description']) { ?>
-			<p><?php echo esc_html($current_options['service_description']); ?></p>
-		<?php } ?>
+			<p>Želite udomiti kunića? Zavirite u <a href="http://192.168.19.50/category/kunici-za-udomljavanje/">oglase</a>!</p>
 		</div>
 	</div>	
 	<div class="row">
