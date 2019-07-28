@@ -416,8 +416,8 @@ body {
     text-decoration: underline;
 }
 .home-portfolio-showcase-overlay {
-	visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 0.4;
     transition: all 0.4s ease;
     position: absolute;
     top: 0;
@@ -434,7 +434,7 @@ body {
 	margin-top: -120px;
 }
 .home-portfolio-showcase .home-portfolio-showcase-detail {
-    margin-top: 20px;
+    margin-top: 30%;
     text-align: center;
     width: 100%;
 }

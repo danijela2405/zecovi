@@ -52,8 +52,8 @@ body { background-color: #fff !important; color: #333333; }
 
 /*Homepage Portfolio Section--------------------------------------------------------------------------*/ 
 .portfolio-section { background-color: #fafafa; border-bottom: 1px solid #eaeaea; border-top: 1px solid #eaeaea; }
-.home-portfolio-showcase .home-portfolio-showcase-detail h4 { color: #262626; border-bottom: 1px solid #262626; }
-.home-portfolio-showcase .home-portfolio-showcase-detail p { color: #262626; }
+.home-portfolio-showcase .home-portfolio-showcase-detail h4 { color: #262626; border-bottom: 1px solid #f2f2f2; }
+.home-portfolio-showcase .home-portfolio-showcase-detail p { color: #f2f2f2; }
 .portfolio-btn a { background-color: #32343c; color: #262626; }
 .proejct-btn a { background-color: rgba(0, 0, 0, 0); border: 2px solid #32343c; border-radius: 1px; color: #32343c; }
 .proejct-btn a:hover { color: #fff; }
@@ -530,7 +530,9 @@ article.format-aside .aside { background: none repeat scroll 0 0 #d2e0f9; border
 .navbar .navbar-nav > .active > a:focus, .navbar .navbar-nav > .open > a,
 .navbar .navbar-nav > .open > a:hover,
 .navbar .navbar-nav > .open > a:focus, .navbar .navbar-nav > li > a:hover,
-.navbar .navbar-nav > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .blog-pagination a:hover, .blog-pagination a.active, .page-links a:hover, .page-links a.active, .flex_btn, .pagetitle-separator-border, .other-service-area:hover i, .home-portfolio-showcase-overlay, .proejct-btn a:hover, .home-blog-btn a, .tweet-btn a:hover, .post-date, .blog-post-date span.date a, .sidebar-widget-tags a:hover, .tagcloud a:hover, .wpcf7-submit, .search_btn, .search_error, .search_heading, .sidebar-widget-tags a:hover, .blog-author-social li:hover, .blogdetail-btn a , #blogdetail_btn , .wallstreet_page_heading, .post-password-form input[type="submit"], a.blog-btn {background-color: #f2f2f2 !important;}
+.navbar .navbar-nav > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .blog-pagination a:hover, .blog-pagination a.active, .page-links a:hover, .page-links a.active, .flex_btn, .pagetitle-separator-border, .other-service-area:hover i, .proejct-btn a:hover, .home-blog-btn a, .tweet-btn a:hover, .post-date, .blog-post-date span.date a, .sidebar-widget-tags a:hover, .tagcloud a:hover, .wpcf7-submit, .search_btn, .search_error, .search_heading, .sidebar-widget-tags a:hover, .blog-author-social li:hover, .blogdetail-btn a , #blogdetail_btn , .wallstreet_page_heading, .post-password-form input[type="submit"], a.blog-btn {background-color: #f2f2f2 !important;}
+
+.home-portfolio-showcase-overlay{ background-color: #262626; }
 
 .header-top-area, .sidebar-widget-tab > .active a, .pagetitle-separator-box {
 	background: none repeat scroll 0 0 #f2f2f2;
