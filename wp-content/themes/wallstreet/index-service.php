@@ -20,54 +20,34 @@
 		</div>
 	</div>	
 	<div class="row">
-		<div class="col-md-4 col-sm-6 <?php if($current_options['service_section_animation_enabled']==true) { echo "service-effect";} else { echo "stop-service-effect";}?>">
-			<?php if($current_options['service_image_one']) { ?>
+        <?php
+        $posts = get_posts(['category' => 20]);
+
+        $count = 0;
+        foreach ($posts as $post) {
+            if ($count > 3) {
+                break;
+            }
+            ?>
+
+            <div class="col-md-4 col-sm-6 service-effect">
 			<div class="service-box">
-				<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="<?php echo esc_url($current_options['service_image_one']); ?>">
+                <?php $image = wp_get_attachment_image_src(
+                    get_post_thumbnail_id($post->ID),
+                    'single-post-thumbnail'
+                ); ?>
+                <img class="img-responsive service-box-image" src="<?php echo $image[0]; ?>">
 			</div>
-			<?php } ?>
 			<div class="service-area">
-			<?php if($current_options['service_title_one']) { ?>
-			<h2><a href="#"><?php echo esc_html($current_options['service_title_one']); ?></a></h2>
-			<?php } ?>
-			<?php if($current_options['service_description_one']) { ?>
-			<p><?php echo esc_html($current_options['service_description_one']); ?></p>
-			<?php } ?>
+                <h2><a href="#"><?php echo esc_html($post->post_title); ?></a></h2>
+                <p><?php echo esc_html($post->post_excerpt); ?></p>
 			</div><!-- / service-area -->
 		</div> <!-- / service-effect column -->
-		
-		<div class="col-md-4 col-sm-6 <?php if($current_options['service_section_animation_enabled']==true) { echo "service-effect";} else { echo "stop-service-effect";}?>">
-			<?php if($current_options['service_image_two']) { ?>
-			<div class="service-box">
-				<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="<?php echo esc_url($current_options['service_image_two']); ?>">
-			</div>
-			<?php } ?>
-			<div class="service-area">
-			<?php if($current_options['service_title_two']) { ?>
-			<h2><a href="#"><?php echo esc_html($current_options['service_title_two']); ?></a></h2>
-			<?php } ?>
-			<?php if($current_options['service_description_two']) { ?>
-			<p><?php echo esc_html($current_options['service_description_two']); ?></p>
-			<?php } ?>
-			</div><!-- / service-area -->
-		</div> <!-- / service-effect column -->
-		
-		<div class="col-md-4 col-sm-6 <?php if($current_options['service_section_animation_enabled']==true) { echo "service-effect";} else { echo "stop-service-effect";}?>">
-			<?php if($current_options['service_image_three']) { ?>
-			<div class="service-box">
-				<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="<?php echo esc_url($current_options['service_image_three']); ?>">
-			</div>
-			<?php } ?>
-			<div class="service-area">
-			<?php if($current_options['service_title_three']) { ?>
-			<h2><a href="#"><?php echo esc_html($current_options['service_title_three']); ?></a></h2>
-			<?php } ?>
-			<?php if($current_options['service_description_three']) { ?>
-			<p><?php echo esc_html($current_options['service_description_three']); ?></p>
-			<?php } ?>
-			</div><!-- / service-area -->
-		</div> <!-- / service-effect column -->
-		
+
+            <?php
+            $count++;
+        }
+        ?>
 	</div>	
 </div>
 </div>
